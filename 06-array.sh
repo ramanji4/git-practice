@@ -2,7 +2,7 @@
 
 Fruits=(Kiwi, Mango, Pineapple, Apple)
 
-echo "First Fruit is $Fruits[0]"
+echo "First Fruit is ${Fruits[0]}"
 
 echo "last Fruit is ${Fruits[3]}"
 
