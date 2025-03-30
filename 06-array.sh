@@ -6,4 +6,4 @@ echo "First Fruit is ${Fruits[0]}"
 
 echo "last Fruit is ${Fruits[3]}"
 
-echo "total fruits are :${Fruits[@]}"  
+echo "total fruits are :${Fruits[]}"  
