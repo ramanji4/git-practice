@@ -21,4 +21,5 @@ then
         echo "git installed SUCCESSFULLY"
     if
 else
-    echo "git is already installed...nothing to do" 
+    echo "git is already installed...nothing to do"
+if
