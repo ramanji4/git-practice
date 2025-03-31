@@ -4,16 +4,15 @@ USER=$(id -u)
 
 if [ $USER -ne 0 ]
 then 
-    echo "Please run the script with root previlages"
+    echo "Please run the script with root previleges"
     exit 1
-if
+fi
 
 dnf list installed git 
 
 if [ $? ne 0 ]
 then
     echo "git is not installed... goint to install the git"
-    exit 1
 
     dnf install git -y
     if [ $? ne 0]
@@ -24,3 +23,4 @@ then
     fi
 else
     echo "git is already installed...nothing to do"
+fi
