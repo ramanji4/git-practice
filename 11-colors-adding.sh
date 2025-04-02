@@ -7,7 +7,7 @@ R="\e[31m"
 G="\e[32m"
 
 ROOT_ACCESS(){
-    if [ $USERDID ne 0 ]
+    if [ $USERDID -ne 0 ]
     then
         echo "Please run the script with root preveleges"
         exit 1
@@ -15,7 +15,7 @@ ROOT_ACCESS(){
 }
 
 VALIDATION(){
-    if [ $1 ne 0 ]
+    if [ $1 -ne 0 ]
     then 
         echo "$2 installation is $R FAILED $N "
     else
@@ -25,7 +25,7 @@ VALIDATION(){
 
 dnf list installed git 
 
-if [ $? ne 0 ]
+if [ $? -ne 0 ]
 then 
     echo "git is not installed...going to install" 
     dnf install git -y 
@@ -34,7 +34,7 @@ fi
 
 
 dnf list installed mysql 
-if [ $? ne 0 ]
+if [ $? -ne 0 ]
 then
     echo "mysql is not installed...going to install mysql"
     dnf install mysql -y
