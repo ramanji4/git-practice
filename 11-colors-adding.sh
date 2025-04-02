@@ -22,7 +22,7 @@ VALIDATION(){
         echo "$2 is installed $G SUCCESSFULLY $N"
     fi
 }
-s
+
 ROOT_ACCESS
 
 dnf list installed git 
