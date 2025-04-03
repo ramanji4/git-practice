@@ -17,10 +17,10 @@ ROOT_ACCESS(){
 VALIDATION(){
     if [ $1 -ne 0 ]
     then 
-        echo "$2 installation is $R FAILED $N"
+        echo "$2 installation is $R FAILED$N"
         exit 1
     else
-        echo "$2 is installed $G SUCCESSFULLY $N"
+        echo "$2 is installed $G SUCCESSFULLY$N"
     fi
 }
 
