@@ -2,9 +2,9 @@
 
 USERID=$(id -u)
 
-N="\e[0m"
 R="\e[31m"
 G="\e[32m"
+N="\e[0m"
 
 ROOT_ACCESS(){
     if [ $USERID -ne 0 ]
@@ -37,6 +37,7 @@ fi
 
 
 dnf list installed mysql 
+
 if [ $? -ne 0 ]
 then
     echo "mysql is not installed...going to install mysql"
