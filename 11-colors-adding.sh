@@ -9,7 +9,7 @@ N="\e[0m"
 ROOT_ACCESS(){
     if [ $USERID -ne 0 ]
     then
-        echo -e " $R PLEASE RUN THE SCRIPT WITH ROOT PRIVELEGES $N "
+        echo -e "$R PLEASE RUN THE SCRIPT WITH ROOT PRIVELEGES $N"
         exit 1
     fi
 }
