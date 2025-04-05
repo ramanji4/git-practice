@@ -41,11 +41,11 @@ ROOT_ACCESS
 
 dnf list installed git 
 
-CHECK_VALIDATION $? "Git"
+CHECK_VALIDATION $? "git"
 
 dnf install git -y
 
-STATUS_VALIDATION $? "Git"
+STATUS_VALIDATION $? "git"
 
 
 
@@ -57,3 +57,13 @@ CHECK_VALIDATION $? "nginx"
 dnf install nginx -y
 
 STATUS_VALIDATION $? "nginx"
+
+
+
+dnf list installed mysql
+
+CHECK_VALIDATION $? "mysql"
+
+dnf install mysql -y
+
+STATUS_VALIDATION $? "mysql"
