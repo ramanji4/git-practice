@@ -16,4 +16,16 @@ ROOT_ACCESS(){
     fi
 } 
 
+VALIDATION(){
+    if [ $1 -eq 0 ]
+    then
+        echo "$2 is installed already...nothing to do"
+    else
+        echo "$2 is not installed...going to install $2"
+}
+
 ROOT_ACCESS 
+
+dnf list installed git 
+
+VALIDATION $? "Git"
