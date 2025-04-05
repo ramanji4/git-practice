@@ -33,7 +33,7 @@ do
     if [ $? -ne 0 ]
     then
         echo -e "$Y $package is not installed...going to install it $N"
-        dnf install $package
+        dnf install $package -y
         VALIDATION $? "$package"
     else
         echo -e "$G $package is already installed...nothing to do $N"
