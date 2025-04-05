@@ -9,14 +9,14 @@ N="\e[0m"
 ROOT_ACCESS(){
     if [ $USERID -eq 0 ]
     then
-        echo "Running the scripts with root Priveleges"
+        echo -e "$G RUNNING THE SCRIPT WITH ROOT PREVILEGES $N"
     else
-        echo "PLEASE RUN THE SCRIPT WITH ROOT PRIVELEGES"
+        echo -e "$R PLEASE RUN THE SCRIPT WITH ROOT PRIVELEGES $N"
         exit 1
     fi
 } 
 
-VALIDATION(){
+CHECK_VALIDATION(){
     if [ $1 -eq 0 ]
     then
         echo "$2 is installed already...nothing to do"
@@ -25,27 +25,26 @@ VALIDATION(){
     fi 
 }
 
-VALIDATION_2(){
+STATUS_VALIDATION(){
     if [ $1 -eq 0 ]
     then
-        echo "$2 is installed SUCCESSFULLY"
+        echo -e "$2 is installed $G SUCCESSFULLY $N"
     else
-        echo "$2 installation id FAILURE...Please check it"
+        echo -e "$R $2 installation is FAILURE...Please check it $N"
+        exit 1
     fi
 }
 
 ROOT_ACCESS 
 
 
-
-
 dnf list installed git 
 
-VALIDATION $? "Git"
+CHECK_VALIDATION $? "Git"
 
 dnf install git -y
 
-VALIDATION_2 $? "Git"
+STATUS_VALIDATION $? "Git"
 
 
 
