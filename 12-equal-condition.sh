@@ -17,14 +17,6 @@ ROOT_ACCESS(){
     fi
 } 
 
-CHECK_VALIDATION(){
-    if [ $1 -eq 0 ]
-    then
-        echo -e " $G $2 is installed already...nothing to do $N"
-    else
-        echo -e "$O $2 is not installed...going to install $2 $N"
-    fi 
-}
 
 STATUS_VALIDATION(){
     if [ $1 -eq 0 ]
@@ -39,31 +31,22 @@ STATUS_VALIDATION(){
 ROOT_ACCESS 
 
 
-dnf list installed git 
-
-CHECK_VALIDATION $? "git"
-
-dnf install git -y
-
-STATUS_VALIDATION $? "git"
-
-
-
-
 dnf list installed nginx
-
-CHECK_VALIDATION $? "nginx"
-
-dnf install nginx -y
-
-STATUS_VALIDATION $? "nginx"
-
-
+if [ $? -eq 0 ]
+then
+    echo -e "$G nignx is installed already...nothing to do $N"
+else
+    echo -e "$O nginx is not installed...going to install nginx $N"
+    dnf install nginx -y
+    STATUS_VALIDATION $? "nginx"
+fi
 
 dnf list installed mysql
-
-CHECK_VALIDATION $? "mysql"
-
-dnf install mysql -y
-
-STATUS_VALIDATION $? "mysql"
+if [ $? -eq 0 ]
+then
+    echo -e "$G mysql is installed already...nothing to do $N"
+else
+    echo -e "$O mysql is not installed...going to install mysql $N"
+    dnf install mysql -y
+    STATUS_VALIDATION $? "mysql"
+fi
