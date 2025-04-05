@@ -7,7 +7,7 @@ G="\e[32m"
 N="\e[0m"
 
 ROOT_ACCESS(){
-    if [ $USERID eq 0 ]
+    if [ $USERID -eq 0 ]
     then
         echo "Running the scripts with root Priveleges"
     else
