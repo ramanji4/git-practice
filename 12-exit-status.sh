@@ -5,6 +5,7 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+O="\e[38;5;130m"
 
 ROOT_ACCESS(){
     if [ $USERID -eq 0 ]
@@ -19,16 +20,16 @@ ROOT_ACCESS(){
 CHECK_VALIDATION(){
     if [ $1 -eq 0 ]
     then
-        echo "$2 is installed already...nothing to do"
+        echo -e " $G $2 is installed already...nothing to do $N"
     else
-        echo "$2 is not installed...going to install $2"
+        echo -e "$O $2 is not installed...going to install $2 $N"
     fi 
 }
 
 STATUS_VALIDATION(){
     if [ $1 -eq 0 ]
     then
-        echo -e "$2 is installed $G SUCCESSFULLY $N"
+        echo -e " $G $2 is installed SUCCESSFULLY $N"
     else
         echo -e "$R $2 installation is FAILURE...Please check it $N"
         exit 1
