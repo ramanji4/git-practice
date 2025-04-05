@@ -14,6 +14,14 @@ G="\e[32m"
 Y="\e[32m"
 N="\e[0m"
 
+ROOT_ACCESS(){
+    if [ $USERID -ne 0 ]
+    then
+        echo -e "$R PLEASE RUN THE SCRIPT WITH ROOT PRIVELEGES $N"
+        exit 1
+    fi
+}
+
 VALIDATION(){
     if [ $1 -ne 0 ]
     then
