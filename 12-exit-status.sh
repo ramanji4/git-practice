@@ -22,6 +22,7 @@ VALIDATION(){
         echo "$2 is installed already...nothing to do"
     else
         echo "$2 is not installed...going to install $2"
+    fi
 }
 
 ROOT_ACCESS 
