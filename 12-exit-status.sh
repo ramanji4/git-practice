@@ -51,8 +51,8 @@ STATUS_VALIDATION $? "Git"
 
 dnf list installed nginx
 
-VALIDATION $? "nginx"
+CHECK_VALIDATION $? "nginx"
 
 dnf install nginx -y
 
-VALIDATION_2 $? "nginx"
+STATUS_VALIDATION $? "nginx"
