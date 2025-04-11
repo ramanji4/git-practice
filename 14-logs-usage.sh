@@ -22,6 +22,12 @@ ROOT_ACCESS(){
     fi
 }
 
+USAGE(){
+    echo -e "$R USAGE : sudo sh $0 package1 package2 package3....$N"
+    exit 1
+}
+
+
 VALIDATION(){
     if [ $1 -ne 0 ]
     then
@@ -32,10 +38,6 @@ VALIDATION(){
     fi
 }
 
-USAGE(){
-    echo -e "$R USAGE : sudo sh $0 package1 package2 package3....$N"
-    exit 1
-}
 
 echo "Script started executing at: $(date)" | tee -a $LOG_FILE
 
