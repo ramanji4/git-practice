@@ -34,11 +34,11 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-echo "Files: $FILES"
 
 if [ ! -z "$FILES" ]
 then
     echo -e "$G files are found $N"
+    echo "files: $FILES"
     ZIP_FILE="$DESTINATION_DIR/app-log_$TIME_STAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@
     if [ -f $ZIP_FILE ]
