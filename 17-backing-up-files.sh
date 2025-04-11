@@ -7,8 +7,8 @@ TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 R="\e[31m"
 G="\e[32m"
-N="\e[0m]"
-Y="\e[33m]"
+N="\e[0m"
+Y="\e[33m"
 
 USAGE(){
     echo -e " $R USAGE: $0 <source_dir> <destination_dir> days(optional) $N"
