@@ -54,5 +54,5 @@ then
         exit 1
     fi
 else
-    echo "No files found older than $DAYS..."
-fi
+    echo -e "$Y No files found older than $DAYS... $N"
+fi 
