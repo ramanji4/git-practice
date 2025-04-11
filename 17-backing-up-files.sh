@@ -35,7 +35,9 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
 echo "Files: $FILES"
 
-if [ -z "$FILES" ]
+if [ ! -z "$FILES" ]
 then
-    echo "no files found"
+    echo "files are found"
+else
+    echo "no files in current directory"
 fi
