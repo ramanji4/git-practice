@@ -26,6 +26,11 @@ USAGE(){
     exit 1
 }
 
+if [ $# -eq 0 ]
+then
+    USAGE
+fi
+
 mkdir -p $LOGS_FOLDER 
 
 VALIDATION(){
@@ -40,12 +45,6 @@ VALIDATION(){
 
 
 echo "Script started executing at: $(date)" | tee -a $LOG_FILE
-
-if [ $# -eq 0 ]
-then
-    USAGE
-fi
-
 
 ROOT_ACCESS
 
