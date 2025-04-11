@@ -31,6 +31,8 @@ then
     USAGE
 fi
 
+ROOT_ACCESS
+
 mkdir -p $LOGS_FOLDER 
 
 VALIDATION(){
@@ -46,7 +48,6 @@ VALIDATION(){
 
 echo "Script started executing at: $(date)" | tee -a $LOG_FILE
 
-ROOT_ACCESS
 
 for package in $@
 do
