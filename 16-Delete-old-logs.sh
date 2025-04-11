@@ -19,11 +19,11 @@ echo "Files: $FILES"
 
 
  #IFS(internal field separator. IFS means empty here... IFS will not ignore white spaces...
- # -r is for not to ignore special charqacters like / 
+ # -r is for not to ignore special charqacters like / or _
  # didn't use line, as line is a reserved word 
 
 while IFS= read -r file    
 do
     echo "Deleting file: $file"
     rm -rf $file
-done <<< $FILES 
+done <<< $FILES
