@@ -43,16 +43,16 @@ then
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@
     if [ -f $ZIP_FILE ]
     then
-        echo -e "$G SUCCESSFULLY Zipped the files $N older than $DAYS"
+        echo -e "$G SUCCESSFULLY Zipped the files $N older than $DAYS days"
         while IFS= read -r file
         do
             echo "Deleting line: $file"
             rm -rf $file
         done <<< $FILES 
     else
-        echo -e "$R FAILED $N to Zipping the files...Pleae check"
+        echo -e "$R FAILED $N to Zipping the files...Please check"
         exit 1
     fi
 else
-    echo -e "$Y No files found older than $DAYS... $N"
+    echo -e "$Y No files found older than $DAYS days... $N"
 fi 
