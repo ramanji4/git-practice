@@ -37,3 +37,4 @@ echo "Files: $FILES"
 if [ -z $FILES ]
 then
     echo "no files found"
+fi
