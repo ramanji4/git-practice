@@ -9,8 +9,8 @@ failure(){
 }
 
 trap 'failure " ${LINENO}" "$BASH_COMMAND"' ERR   #ERR is the error signal 
-                                                #trap command will catch the error with "ERR" and then calls failure function
+                                                  #trap command will catch the error with "ERR" and then calls failure function
 
 echo "Hello World success"
 echooo "Hello World failure" 
-echo "Hello World after failure"
+echo "Hello World after failure" 
